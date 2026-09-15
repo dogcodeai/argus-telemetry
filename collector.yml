@@ -1,4 +1,3 @@
-
 name: argus-telemetry
 # The eye's first live nerve. Every ~30 minutes: read public meme-market
 # telemetry, append one line to data/telemetry.jsonl, commit. No keys,
@@ -16,7 +15,7 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Collect one pass
         run: python3 collector.py
       - name: Commit the line
